@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { LinkedInPost } from "../types/postTypes";
-import userImage from '../asset/user.png';
 import Image from "next/image";
 import ImageModal from "./ImageModel";
 import { useState, useCallback } from "react";
@@ -83,9 +82,10 @@ const PostCard = ({ post }: { post: LinkedInPost }) => {
                                 className="flex items-center mb-3 cursor-pointer"
                             >
                                 <Image
-                                    src={userImage}
+                                    src={'/user.png'}
                                     alt="Profile"
                                     className="w-10 h-10 rounded-full mr-3 object-cover"
+                                width={50} height={50}
                                 />
                                 <h3 className="font-semibold text-black">
                                     {`${post.resharedPost.author.firstName ?? ""} ${post.resharedPost.author.lastName ?? ""}`.trim() || "Unknown Author"}
