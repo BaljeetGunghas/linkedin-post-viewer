@@ -63,6 +63,7 @@ const useFetchPosts = (filters: PostFilters) => {
     };
 
     fetchPosts();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [JSON.stringify(filters)]); // rerun on any filter change
 
   return { data, loading, error };
