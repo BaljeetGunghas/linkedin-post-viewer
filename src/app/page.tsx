@@ -48,8 +48,6 @@ export default function Home() {
     });
   };
 
-
-
   return (
     <main className="min-h-screen bg-gray-100 p-4">
       <LinkdinHeader
@@ -69,7 +67,6 @@ export default function Home() {
           {error}
         </p>
       )}
-
       {!loading && <div className="p-4 rounded-lg mb-6 w-full max-w-5xl mx-auto my-3">
         <h2
           onClick={() => setIsTop3Clicked((prev) => !prev)}
@@ -83,7 +80,7 @@ export default function Home() {
           <PostCard key={post.urn} post={post} />
         ))}
 
-       {!isTop3Clicked && <div className="flex justify-center">
+        {!isTop3Clicked && data?.data?.total && data?.data?.total > 10 && <div className="flex justify-center">
           <button
             onClick={handleloadMore}
             className="w-1/4 m-auto bg-blue-600 text-white py-2 rounded hover:bg-blue-700 cursor-pointer transition duration-200"

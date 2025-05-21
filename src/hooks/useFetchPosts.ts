@@ -20,7 +20,7 @@ type PostFilters = {
 };
 
 const useFetchPosts = (filters: PostFilters) => {
-    const [data, setData] = useState<LinkedInApiResponse | null>(null);
+  const [data, setData] = useState<LinkedInApiResponse | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -46,8 +46,8 @@ const useFetchPosts = (filters: PostFilters) => {
           },
           {
             headers: {
-              'X-RapidAPI-Key': '08d3c5ac61msh7a4d612941cc7bep1ffcd3jsn8b9e6f678219',
-              'X-RapidAPI-Host': 'linkedin-api8.p.rapidapi.com',
+              'X-RapidAPI-Key': process.env.NEXT_PUBLIC_X_RAPIDAPI_KEY,
+              'X-RapidAPI-Host': process.env.NEXT_PUBLIC_X_RAPIDAPI_HOST,
               'Content-Type': 'application/json',
             },
           }
@@ -63,7 +63,7 @@ const useFetchPosts = (filters: PostFilters) => {
     };
 
     fetchPosts();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [JSON.stringify(filters)]); // rerun on any filter change
 
   return { data, loading, error };

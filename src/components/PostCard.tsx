@@ -30,7 +30,7 @@ const PostCard = ({ post }: { post: LinkedInPost }) => {
             <div className="bg-background p-4 rounded-lg shadow mb-6 w-full max-w-2xl mx-auto">
 
                 {/* Author */}
-                <Link href={post.author?.url || "#"} target="_blank" className="flex items-center mb-3 cursor-pointer">
+                <Link href={post.author?.url || "#"} target="_blank" className="flex md:items-center mb-3 cursor-pointer">
                     {profileImage ? (
                         // eslint-disable-next-line @next/next/no-img-element
                         <img
