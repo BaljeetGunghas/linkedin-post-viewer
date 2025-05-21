@@ -11,7 +11,8 @@
 
 @theme inline {
   --color-background: var(--background);
-  --color-secondrybackground: var(--secondrybackground);
+  --color-secondrybg: var(--secondrybackground);
+  --color-linkPostbg: var(--postLinkBackground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
