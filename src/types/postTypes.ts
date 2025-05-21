@@ -93,3 +93,15 @@ export interface ResharedPost {
     };
     entity?: any;
 }
+
+
+
+
+
+
+
+export interface FiltersState {
+    keyword: string;
+    contentType: string;
+    page:number;
+}

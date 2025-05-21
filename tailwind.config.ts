@@ -10,6 +10,7 @@ const config: Config = {
             colors: {
                 primarybg: "var(--background)",
                 secondrybg: "var(--secondrybackground)",
+                linkPostbg: "var(--postLinkBackground)",
             },
             padding: {
                 mainPadding: "var(--mainPadding)",
