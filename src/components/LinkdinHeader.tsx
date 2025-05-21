@@ -2,7 +2,6 @@
 
 import Image from 'next/image';
 import React, { useState } from 'react';
-import linkdin from '../asset/logo.svg';
 import { FaFilter } from 'react-icons/fa';
 import FilterDrawer from './FilterDrawer';
 import { FiltersState } from '@/types/postTypes';
@@ -25,7 +24,7 @@ const LinkdinHeader: React.FC<LinkdinHeaderProps> = ({ onApply }) => {
         {/* Left: Logo */}
         <div className="flex items-center space-x-2">
           <div className="w-8 h-8 bg-blue-600 rounded-md text-white flex items-center justify-center font-bold">
-            <Image src={linkdin} alt='Linkdin' width={50} height={50} />
+            <Image src="/logo.svg" alt='Linkdin' width={50} height={50} />
           </div>
           <span className="font-bold text-blue-500 text-3lg">Linked In</span>
         </div>
